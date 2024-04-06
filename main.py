@@ -94,5 +94,6 @@ if __name__ == '__main__':
     udp_thread.daemon = True
     udp_thread.start()
 
-    # Start Flask HTTP server
-    app.run(port=3000)
+    # Start Flask HTTP server on all available interfaces
+    app.run(host='0.0.0.0', port=3000)
+
